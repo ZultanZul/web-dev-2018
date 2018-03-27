@@ -1,1 +1,21 @@
 /* Testing this out */
+
+$mainBlue: #2f5572;
+
+body {
+	color: $mainBlue;
+	margin: 10px;
+	padding: 25px;
+	columns: 300px 2;
+}
+
+.box {
+
+	a {
+		text-decoration: none;
+	}
+
+	span {
+		font-weight: bold;
+	}
+}
