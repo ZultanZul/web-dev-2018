@@ -15,18 +15,18 @@ gulp.task('html', function(){
 });
 
 gulp.task('styles', function(){
-	return gulp.src('./app/assets/styles/styles.css')
+	return gulp.src('./src/assets/styles/styles.css')
 		.pipe(postcss([cssimport, cssvars, nested, autoprefixer]))
-		.pipe(gulp.dest('./app/temp/styles'));
+		.pipe(gulp.dest('./src/temp/styles'));
 });
 
 gulp.task('watch', function(){
 
-	watch('./app/index.html', function(){
+	watch('./src/index.html', function(){
 		gulp.start('html');
 	});
 
-	watch('./app/assets/styles/**/*.css', function(){
+	watch('./src/assets/styles/**/*.css', function(){
 		gulp.start('styles');
 	});
 
